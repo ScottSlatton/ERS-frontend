@@ -1,0 +1,32 @@
+
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+  <form (submit)="onSubmit()">
+      <div class="mb-3">
+        <label for="amountInput" class="form-label">Amount</label>
+        <input required [(ngModel)]="amount" name="amount" type="number" class="form-control" id="amountInput"placeholder="0">
+      </div>
+      
+      <label for="type" class="form-label">Type of Request</label>
+      <div class="mb-3">
+          <select [(ngModel)]="type" name="type" class="custom-select" required>
+              <option value="Lodging">Lodging</option>
+              <option value="Travel">Travel</option>
+              <option value="Food">Food</option>
+              <option value="Other">Other</option>
+            </select>
+      </div>
+      <div class="mb-3">
+          <label for="descriptionInput" class="form-label">Description</label>
+          <textarea required [(ngModel)]="description" name="description" class="form-control" id="descriptionInput" rows="3"></textarea>
+        </div>
+
+        <input type= "file"  (change) = "doFile($event)" >
+        
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
+  </div>
+
+</div>
