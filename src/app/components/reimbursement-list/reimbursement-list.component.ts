@@ -40,4 +40,8 @@ export class ReimbursementListComponent implements OnInit {
     reimbursement.resolver = this.user;
     this.reimbursementService.updateReimbursement(reimbursement).subscribe(response => console.log(response));
   }
+
+  resizeImage(el){
+    el.addClass("active");
+  }
 }

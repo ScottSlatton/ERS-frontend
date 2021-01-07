@@ -2,3 +2,8 @@
     height: 128px;
     width: 128px;
 }
+
+.clicked{
+    height: 100%;
+    width: 100%;
+}

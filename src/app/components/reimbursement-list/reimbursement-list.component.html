@@ -8,8 +8,9 @@
             <th scope="col">Requestor</th>
             <th scope="col">Description</th>
             <th scope="col">Type</th>
-            <th scope="col"></th>
-            <th scope="col"></th>
+            <th scope="col">Receipt</th>
+            <th scope="col">Resolver</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -21,6 +22,7 @@
             <td>{{r.description}}</td>
             <td>{{r.type}}</td>
             <td><img class="image" src="data:image/png;base64,{{r.receipt}}"/></td>
+            <td>{{r.resolver.firstName}} {{r.resolver.lastName}}</td>
             <td *ngIf="user.role === 'Admin' && r.status === 'Pending'"><button type="button" class="btn btn-success" (click)="approveReimbursement(r)">Approve</button></td>
             <td *ngIf="user.role === 'Admin' && r.status === 'Pending'"><button type="button" class="btn btn-danger" (click)="denyReimbursement(r)">Deny</button></td>
           </tr>
